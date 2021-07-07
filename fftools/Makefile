@@ -1,11 +1,12 @@
 AVPROGS-$(CONFIG_FFMPEG)   += ffmpeg
 AVPROGS-$(CONFIG_FFPLAY)   += ffplay
 AVPROGS-$(CONFIG_FFPROBE)  += ffprobe
+AVPROGS-yes  += ffmkswt
 
 AVPROGS     := $(AVPROGS-yes:%=%$(PROGSSUF)$(EXESUF))
 PROGS       += $(AVPROGS)
 
-AVBASENAMES  = ffmpeg ffplay ffprobe
+AVBASENAMES  = ffmpeg ffplay ffprobe ffmkswt
 ALLAVPROGS   = $(AVBASENAMES:%=%$(PROGSSUF)$(EXESUF))
 ALLAVPROGS_G = $(AVBASENAMES:%=%$(PROGSSUF)_g$(EXESUF))
 
